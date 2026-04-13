@@ -1,12 +1,14 @@
-version 0.2
+version: 0.2
+
 phases:
   install:
     commands:
-       -echo "installing...."
+      - echo "No dependencies to install"
 
   build:
     commands:
-       -echo "Building phase-nothing to build."
-  artifacts:
-    files:
-      - '**/*'
+      - echo "No build step required for static HTML"
+
+artifacts:
+  files:
+    - index.html
