@@ -1,0 +1,4 @@
+﻿Portfolio CMS Database Schema Definitions
+- users (id, email, password, created_at)
+- profile (id, full_name, title, email, phone, location, bio, avatar_url, resume_url, github_url, linkedin_url, meta)
+- projects (id, title, description, short_desc, category, tech_stack, github_url, live_url, image_url, featured, status, display_order)
