@@ -1,4 +1,30 @@
-﻿{
-  "cleanUrls": true,
-  "trailingSlash": false
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server/api.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "**/*",
+      "use": "@vercel/static",
+      "config": {
+        "ignore": [
+          "server/**",
+          "node_modules/**",
+          "data/**"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/api.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
 }

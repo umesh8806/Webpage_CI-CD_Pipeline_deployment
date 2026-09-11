@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-cms",
+  "version": "2.0.0",
+  "description": "Umesh Bhamare — Portfolio CMS",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve -l 3000 .",
+    "api": "node server/api.js",
+    "start": "node server/api.js"
+  }
+}

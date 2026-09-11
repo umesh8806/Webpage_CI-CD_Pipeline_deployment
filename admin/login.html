@@ -1,271 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Login | Portfolio CMS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login — UB Portfolio CMS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #050508;
-      --card-bg: rgba(15, 15, 22, 0.6);
-      --card-border: rgba(255, 59, 48, 0.12);
-      --text: #f3f4f6;
-      --text-muted: #9ca3af;
-      --accent: #ff3b30;
-      --accent-purple: #ff8f00;
-      --accent-pink: #ffcc00;
-      --accent-glow: rgba(255, 59, 48, 0.25);
-      --font-display: 'Outfit', sans-serif;
-      --font-body: 'Plus Jakarta Sans', sans-serif;
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#050508;--neon-blue:#00D4FF;--neon-purple:#A855F7;
+      --surface:rgba(12,12,22,.9);--border:rgba(0,212,255,.15);
+      --text:#f3f4f6;--muted:rgba(255,255,255,.55);--danger:#ff2a5f;
     }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: var(--font-body);
-      background: var(--bg);
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text);
-      overflow: hidden;
-      position: relative;
-    }
-
-    /* Ambient background glows */
-    .ambient-glow {
-      position: absolute;
-      width: 50vw;
-      height: 50vw;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 1;
-      filter: blur(100px);
-      opacity: 0.15;
-    }
-    .glow-1 {
-      top: -10%;
-      left: -10%;
-      background: var(--accent);
-    }
-    .glow-2 {
-      bottom: -10%;
-      right: -10%;
-      background: var(--accent-purple);
-    }
-
-    /* Grid Overlay */
-    .grid-overlay {
-      position: absolute;
-      inset: 0;
-      background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-      background-size: 50px 50px;
-      pointer-events: none;
-      z-index: 2;
-    }
-    
-    .login-box {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      padding: 3.5rem 2.5rem;
-      border-radius: 24px;
-      width: 90%;
-      max-width: 420px;
-      text-align: center;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-      z-index: 10;
-      backdrop-filter: blur(25px);
-      -webkit-backdrop-filter: blur(25px);
-      position: relative;
-    }
-    
-    .login-box::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-purple));
-      border-radius: 24px 24px 0 0;
-    }
-    
-    h2 {
-      font-family: var(--font-display);
-      font-size: 2.2rem;
-      font-weight: 900;
-      letter-spacing: -1px;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-purple) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 2.2rem;
-      font-weight: 500;
-    }
-    
-    .input-group {
-      position: relative;
-      margin-bottom: 1.5rem;
-    }
-    
-    .input-group i {
-      position: absolute;
-      left: 1.2rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      transition: color 0.3s;
-      z-index: 2;
-    }
-    
-    input {
-      width: 100%;
-      padding: 1.1rem 1.2rem 1.1rem 3.2rem;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid var(--card-border);
-      border-radius: 14px;
-      color: #fff;
-      font-family: inherit;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-    
-    input:focus {
-      outline: none;
-      border-color: var(--accent);
-      background: rgba(0, 242, 255, 0.02);
-      box-shadow: 0 0 20px var(--accent-glow);
-    }
-    
-    input:focus + i {
-      color: var(--accent);
-    }
-    
-    button {
-      width: 100%;
-      padding: 1.1rem;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-purple) 100%);
-      border: none;
-      border-radius: 14px;
-      color: #030303;
-      font-family: var(--font-display);
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 1.05rem;
-      margin-top: 1rem;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 5px 20px rgba(0, 242, 255, 0.2);
-    }
-    
-    button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 242, 255, 0.4);
-      filter: brightness(1.1);
-    }
-    
-    button:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-      transform: none !important;
-      box-shadow: none !important;
-    }
-    
-    .error {
-      background: rgba(255, 42, 95, 0.08);
-      border: 1px solid rgba(255, 42, 95, 0.2);
-      color: #ff2a5f;
-      padding: 0.9rem;
-      border-radius: 10px;
-      margin-top: 1.8rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      display: none;
-      animation: fadeIn 0.3s ease;
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-5px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);
+      min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
+    body::before{content:'';position:absolute;inset:0;
+      background-image:linear-gradient(rgba(0,212,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.03) 1px,transparent 1px);
+      background-size:50px 50px;}
+    .glow{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none}
+    .g1{width:500px;height:500px;background:rgba(0,212,255,.1);top:-15%;left:-15%}
+    .g2{width:400px;height:400px;background:rgba(168,85,247,.1);bottom:-10%;right:-10%}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:24px;
+      padding:48px 40px;width:100%;max-width:420px;position:relative;z-index:10;
+      backdrop-filter:blur(20px);box-shadow:0 0 80px rgba(0,212,255,.06)}
+    .logo{text-align:center;margin-bottom:36px}
+    .logo-text{font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:900;
+      background:linear-gradient(135deg,var(--neon-blue),var(--neon-purple));
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-1px}
+    .logo-sub{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+    .field{margin-bottom:20px}
+    .field label{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;
+      color:var(--muted);margin-bottom:8px;font-weight:600}
+    .field input{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+      border-radius:12px;padding:14px 16px;color:var(--text);font-family:'Space Grotesk',sans-serif;
+      font-size:.9rem;outline:none;transition:border-color .2s}
+    .field input:focus{border-color:var(--neon-blue);box-shadow:0 0 0 3px rgba(0,212,255,.1)}
+    .btn{width:100%;padding:14px;border:none;border-radius:50px;
+      background:linear-gradient(135deg,var(--neon-blue),var(--neon-purple));
+      color:#050508;font-family:'Space Grotesk',sans-serif;font-size:.9rem;font-weight:700;
+      cursor:pointer;letter-spacing:1px;margin-top:8px;transition:opacity .2s,transform .2s}
+    .btn:hover{opacity:.88;transform:translateY(-1px)}
+    .err{color:var(--danger);font-size:.8rem;margin-top:14px;text-align:center;display:none}
   </style>
 </head>
 <body>
-
-  <!-- Ambient Glow Backgrounds -->
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
-  
-  <!-- Grid overlay -->
-  <div class="grid-overlay"></div>
-
-  <div class="login-box">
-    <h2>&lt;Console /&gt;</h2>
-    <p>Sign in to configure your Portfolio</p>
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <div class="card">
+    <div class="logo">
+      <div class="logo-text">UB.</div>
+      <div class="logo-sub">CMS Admin Portal</div>
+    </div>
     <form id="loginForm">
-      <div class="input-group">
-        <input type="email" id="email" placeholder="Admin Email" required autocomplete="username">
-        <i class="fas fa-envelope"></i>
+      <div class="field">
+        <label>Username</label>
+        <input type="text" id="uname" placeholder="admin" autocomplete="username" required>
       </div>
-      <div class="input-group">
-        <input type="password" id="password" placeholder="Password" required autocomplete="current-password">
-        <i class="fas fa-lock"></i>
+      <div class="field">
+        <label>Password / Token</label>
+        <input type="password" id="pwd" placeholder="Enter admin token" autocomplete="current-password" required>
       </div>
-      <button type="submit" id="submitBtn">Authenticate</button>
+      <button type="submit" class="btn">Access Dashboard →</button>
+      <div class="err" id="err">❌ Invalid credentials. Please try again.</div>
     </form>
-    <div id="error" class="error"></div>
   </div>
-
-  <script src="../js/config.js"></script>
-  <script src="../js/portfolio.js"></script>
   <script>
-    // Redirect if already authenticated
-    window.portfolioAPI.checkSession().then(session => {
-      if (session && session.authenticated) {
-        window.location.href = 'dashboard.html';
-      }
-    });
-
-    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    if (localStorage.getItem('adminToken')) location.href = 'dashboard.html';
+    document.getElementById('loginForm').addEventListener('submit', e => {
       e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      const submitBtn = document.getElementById('submitBtn');
-      const errorEl = document.getElementById('error');
-
-      errorEl.style.display = 'none';
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Authenticating...';
-      
-      try {
-        await window.portfolioAPI.loginAdmin(email, password);
-        window.location.href = 'dashboard.html';
-      } catch (err) {
-        errorEl.style.display = 'block';
-        errorEl.textContent = err.message;
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Authenticate';
+      const u = document.getElementById('uname').value.trim();
+      const p = document.getElementById('pwd').value.trim();
+      if (u === 'admin' && p === 'portfolio_admin_2026') {
+        localStorage.setItem('adminToken', 'portfolio_admin_2026');
+        location.href = 'dashboard.html';
+      } else {
+        document.getElementById('err').style.display = 'block';
       }
     });
   </script>
 </body>
 </html>
-
-

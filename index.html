@@ -49,7 +49,7 @@
 
   <!-- ==================== PRELOADER ==================== -->
   <div id="loader" aria-hidden="true">
-    <div class="loader-logo brand-initials">AP.</div>
+    <div class="loader-logo brand-initials">UB.</div>
     <div class="loader-bar"><div class="loader-bar-fill"></div></div>
     <div style="margin-top: 20px; font-size: 12px; letter-spacing: 4px; opacity: 0.6; color: var(--neon-blue);">LOADING EXPERIENCE</div>
   </div>
@@ -77,8 +77,8 @@
   <nav class="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-6">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <a href="#home" class="flex items-center gap-2 text-2xl font-display font-extrabold tracking-tight" aria-label="Home">
-        <span class="gradient-text brand-initials">AP</span>
-        <span class="text-xs font-sans font-light tracking-widest text-white/60 brand-fullname">ARYAN PAWAR</span>
+        <span class="gradient-text brand-initials">UB</span>
+        <span class="text-xs font-sans font-light tracking-widest text-white/60 brand-fullname">UMESH BHAMARE</span>
       </a>
 
       <div class="hidden md:flex items-center gap-8 text-sm font-sans">
@@ -150,20 +150,16 @@
       </div>
 
       <!-- Right Column: Interactive 3D Laptop -->
-      <div class="relative h-[500px] lg:h-[600px] flex items-center justify-center">
-        <canvas id="three-canvas"></canvas>
-        <div class="floating-badge float" style="top: 8%; left: 2%;">
-          <div class="badge-dot"></div>
-          <span>Live Project</span>
-        </div>
-        <div class="floating-badge float" style="bottom: 14%; right: 2%; animation-delay: 2s;">
-          <span style="color: var(--neon-purple);">⚡</span>
-          <span>AI Powered</span>
-        </div>
-        <div class="floating-badge float" style="top: 48%; left: -2%; animation-delay: 4s;">
-          <span style="color: #ffcc00;">★</span>
-          <span>Premium Quality</span>
-        </div>
+      <!-- New 3D Effects Container -->
+      <div class="grid grid-cols-2 gap-4" style="height: 600px;">
+        <!-- Effect 1: Rotating Sphere -->
+        <canvas id="effect1-canvas" class="w-full h-full"></canvas>
+        <!-- Effect 2: Rotating Cube -->
+        <canvas id="effect2-canvas" class="w-full h-full"></canvas>
+        <!-- Effect 3: Code Editor Model (Web Dev) -->
+        <canvas id="effect3-canvas" class="w-full h-full"></canvas>
+        <!-- Effect 4: CPU Gear (Computer Engineer) -->
+        <canvas id="effect4-canvas" class="w-full h-full"></canvas>
       </div>
     </div>
 
@@ -207,7 +203,7 @@
 
       <div class="space-y-6 reveal-up">
         <p class="text-lg text-white/80 font-body leading-relaxed" id="aboutBio">
-          I'm <span class="text-neon-blue font-medium brand-fullname">Aryan Pawar</span>, a passionate web designer and developer based in <span class="dynamic-location font-medium">Pune, India</span>. I specialize in crafting modern, high-converting UI/UX designs and AI-powered websites that help businesses attract more customers and stand out in competitive markets.
+          I'm <span class="text-neon-blue font-medium brand-fullname">Umesh Bhamare</span>, a passionate web designer and developer based in <span class="dynamic-location font-medium">Pune, India</span>. I specialize in crafting modern, high-converting UI/UX designs and AI-powered websites that help businesses attract more customers and stand out in competitive markets.
         </p>
         <p class="text-white/70 font-body leading-relaxed">
           From elegant restaurant websites to sleek real estate platforms, SaaS portals, and luxury hotel experiences, I transform ideas into award-winning digital products. Every project is crafted with attention to performance, conversion psychology, and futuristic aesthetics.
@@ -779,7 +775,7 @@
       <div class="grid md:grid-cols-3 gap-12 mb-12">
         <div>
           <div class="flex items-center gap-2 mb-4">
-            <span class="gradient-text text-4xl font-display font-extrabold tracking-tight brand-initials">AP</span>
+            <span class="gradient-text text-4xl font-display font-extrabold tracking-tight brand-initials">UB</span>
           </div>
           <p class="text-sm text-white/60 font-body max-w-xs leading-relaxed">
             Transforming business ideas into futuristic, high-converting digital web experiences with passion and craftsmanship.
@@ -817,7 +813,7 @@
       </div>
 
       <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50 font-body">
-        <div>© 2026 <span class="brand-fullname">Aryan Pawar</span>. Crafted with innovation and precision.</div>
+        <div>© 2026 <span class="brand-fullname footer-copyright">Umesh Bhamare</span>. Crafted with innovation and precision.</div>
         <div class="flex items-center gap-2">
           <div class="badge-dot"></div>
           <span>Available for high-impact projects</span>
@@ -828,9 +824,11 @@
 
   <!-- ==================== MODULAR SCRIPTS ==================== -->
   <script src="js/config.js"></script>
+  <script src="js/cms-content-loader.js"></script>
   <script src="js/cursor.js"></script>
   <script src="js/particles.js"></script>
-  <script src="js/laptop3d.js"></script>
+  <script src="js/replace-ap.js"></script>
+  <script src="js/three-effects.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/mobile-nav.js"></script>
   <script src="js/contact.js"></script>

@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "Umesh Bhamare — Premium Web Designer & AI Website Developer",
+    "description": "Premium Web Designer & AI Website Developer crafting futuristic, high-converting websites for modern businesses.",
+    "keywords": "Umesh Bhamare, web designer, AI website developer, freelance, Pune, premium websites, full stack"
+  },
+  "brand": {
+    "initials": "UB",
+    "fullname": "Umesh Bhamare",
+    "tagline": "Premium Web Designer & AI Website Developer",
+    "location": "Pune, India",
+    "email": "umeshbhamare613@gmail.com",
+    "phone": "+91 9373036872",
+    "whatsapp": "https://wa.me/919373036872",
+    "linkedin": "https://www.linkedin.com/in/umesh-bhamare",
+    "github": "https://github.com/umesh8806"
+  },
+  "hero": {
+    "badge": "Available for Projects • 2026",
+    "headline": "Premium Websites That Help Businesses Grow.",
+    "tagline": "I design modern, high-converting, AI-powered websites for restaurants, hotels, salons, gyms, clinics, real estate, and local businesses.",
+    "cta_primary": "View Portfolio",
+    "cta_secondary": "Book Free Consultation",
+    "stats": [
+      {
+        "value": "50+",
+        "label": "Projects Delivered"
+      },
+      {
+        "value": "4.9",
+        "label": "Client Rating"
+      },
+      {
+        "value": "3x",
+        "label": "Faster Delivery"
+      }
+    ]
+  },
+  "about": {
+    "sectionLabel": "About Me",
+    "headline": "Crafting Digital Experiences That Convert.",
+    "bio": "I am Umesh Bhamare, a passionate web designer and developer based in Pune, India. I specialize in crafting modern, high-converting UI/UX designs and AI-powered websites that help businesses attract more customers and stand out in competitive markets.",
+    "bio2": "From elegant restaurant websites to sleek real estate platforms, SaaS portals, and luxury hotel experiences, I transform ideas into award-winning digital products. Every project is crafted with attention to performance, conversion psychology, and futuristic aesthetics.",
+    "pillars": [
+      {
+        "icon": "🎨",
+        "title": "Design",
+        "subtitle": "Premium UI/UX"
+      },
+      {
+        "icon": "⚡",
+        "title": "Develop",
+        "subtitle": "AI-Powered Code"
+      },
+      {
+        "icon": "🚀",
+        "title": "Launch",
+        "subtitle": "Fast & Secure"
+      },
+      {
+        "icon": "📈",
+        "title": "Grow",
+        "subtitle": "SEO & Conversion"
+      }
+    ]
+  },
+  "services": {
+    "sectionLabel": "Services",
+    "headline": "What I Offer",
+    "description": "End-to-end web solutions crafted with precision, conversion psychology, and luxury aesthetics.",
+    "items": [
+      {
+        "title": "Business Websites",
+        "description": "Professional corporate websites that build credibility, trust, and drive high-value client acquisitions."
+      },
+      {
+        "title": "Restaurant Websites",
+        "description": "Mouthwatering designs with interactive menus, online table reservations, and seamless ordering."
+      },
+      {
+        "title": "Landing Pages",
+        "description": "Ultra high-converting single-page marketing funnels optimized for ad campaigns and lead capture."
+      },
+      {
+        "title": "Portfolio Websites",
+        "description": "Stunning personal showcases that elevate your personal brand and establish elite authority in your field."
+      },
+      {
+        "title": "E-commerce Stores",
+        "description": "Frictionless digital shopping experiences with fast checkouts, inventory control, and payment gateways."
+      },
+      {
+        "title": "Website Redesign",
+        "description": "Modernize outdated sites with cutting-edge UI/UX, responsive layouts, and lightning-fast loading speeds."
+      },
+      {
+        "title": "SEO Optimization",
+        "description": "Climb Google rankings with technical SEO, Core Web Vitals optimization, and structured metadata."
+      },
+      {
+        "title": "Website Maintenance",
+        "description": "Continuous security updates, cloud backups, 99.9% uptime monitoring, and proactive support."
+      }
+    ]
+  },
+  "projects": {
+    "sectionLabel": "Selected Work",
+    "headline": "Featured Projects",
+    "description": "A curated collection of digital experiences crafted for forward-thinking brands and businesses.",
+    "items": [
+      {
+        "tag": "Restaurant",
+        "title": "Luxury Restaurant",
+        "description": "Premium fine dining experience with online reservations and interactive menu showcase.",
+        "tech": [
+          "Next.js",
+          "GSAP",
+          "Three.js"
+        ]
+      },
+      {
+        "tag": "Cafe",
+        "title": "Artisan Cafe",
+        "description": "Cozy boutique café website featuring live menu, online orders, and location finder.",
+        "tech": [
+          "React",
+          "Tailwind"
+        ]
+      },
+      {
+        "tag": "Hotel",
+        "title": "Azure Hotel & Resort",
+        "description": "Luxury hotel booking platform with interactive room tours and amenity showcases.",
+        "tech": [
+          "Next.js",
+          "Stripe"
+        ]
+      },
+      {
+        "tag": "Gym",
+        "title": "Iron Fitness Gym",
+        "description": "High-energy fitness community platform with automated class schedules and memberships.",
+        "tech": [
+          "React",
+          "Framer"
+        ]
+      },
+      {
+        "tag": "Salon",
+        "title": "Bella Beauty Salon",
+        "description": "Elegant salon appointment system with dynamic stylist schedules and treatment menus.",
+        "tech": [
+          "Next.js",
+          "Calendar"
+        ]
+      },
+      {
+        "tag": "Real Estate",
+        "title": "Prime Estates",
+        "description": "Luxury real estate showcase with 3D property tours, interactive maps, and agent consultation.",
+        "tech": [
+          "React",
+          "Maps API"
+        ]
+      },
+      {
+        "tag": "Medical",
+        "title": "Medicare Clinic",
+        "description": "Professional healthcare portal with patient appointment scheduling and directories.",
+        "tech": [
+          "Next.js",
+          "Booking"
+        ]
+      },
+      {
+        "tag": "Fashion",
+        "title": "Noir Fashion Brand",
+        "description": "High-fashion luxury e-commerce with editorial lookbooks and micro-animations.",
+        "tech": [
+          "Shopify",
+          "Custom JS"
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionLabel": "Client Testimonials",
+    "headline": "What Clients Say",
+    "items": [
+      {
+        "name": "Rahul Sharma",
+        "role": "Restaurant Owner, Mumbai",
+        "rating": 5,
+        "text": "Umesh delivered a stunning restaurant website that increased our online bookings by 300%. The animations and design are absolutely world-class."
+      },
+      {
+        "name": "Priya Mehta",
+        "role": "Spa & Salon Director",
+        "rating": 5,
+        "text": "Our new website is the best investment we ever made. The appointment booking system works flawlessly and our revenue grew significantly after launch."
+      },
+      {
+        "name": "Arjun Kapoor",
+        "role": "Hotel General Manager",
+        "rating": 5,
+        "text": "Absolutely professional. Delivered 3 weeks early with exceptional quality. Our hotel bookings increased by 45% within the first month."
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Get In Touch",
+    "headline": "Let's Work Together",
+    "description": "Ready to elevate your digital presence? Let's create something extraordinary together.",
+    "email": "umeshbhamare613@gmail.com",
+    "phone": "+91 9373036872",
+    "location": "Pune, India",
+    "availability": "Available for high-impact projects"
+  },
+  "footer": {
+    "copyright": "© 2026 Umesh Bhamare. Crafted with innovation and precision.",
+    "tagline": "Transforming business ideas into futuristic, high-converting digital web experiences with passion and craftsmanship."
+  }
+}
