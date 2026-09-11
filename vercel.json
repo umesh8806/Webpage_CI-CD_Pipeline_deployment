@@ -1,26 +1,50 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "server/api.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api/auth/login.js": {
+      "memory": 128
     },
-    {
-      "src": "**/*",
-      "use": "@vercel/static",
-      "config": {
-        "ignore": [
-          "server/**",
-          "node_modules/**",
-          "data/**"
-        ]
-      }
+    "api/auth/session.js": {
+      "memory": 128
+    },
+    "api/auth/logout.js": {
+      "memory": 128
+    },
+    "api/profile.js": {
+      "memory": 128
+    },
+    "api/projects.js": {
+      "memory": 128
     }
-  ],
+  },
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/server/api.js"
+      "src": "/api/auth/login",
+      "dest": "/api/auth/login.js"
+    },
+    {
+      "src": "/api/auth/session",
+      "dest": "/api/auth/session.js"
+    },
+    {
+      "src": "/api/auth/logout",
+      "dest": "/api/auth/logout.js"
+    },
+    {
+      "src": "/api/profile",
+      "dest": "/api/profile.js"
+    },
+    {
+      "src": "/api/projects/admin",
+      "dest": "/api/projects.js?admin=1"
+    },
+    {
+      "src": "/api/projects/([0-9]+)",
+      "dest": "/api/projects.js?id=$1"
+    },
+    {
+      "src": "/api/projects",
+      "dest": "/api/projects.js"
     },
     {
       "src": "/(.*)",

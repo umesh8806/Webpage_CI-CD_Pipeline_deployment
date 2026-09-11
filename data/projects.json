@@ -1,0 +1,105 @@
+[
+  {
+    "id": 1,
+    "title": "Luxury Restaurant",
+    "description": "Premium fine dining experience with online reservations and interactive menu showcase.",
+    "short_desc": "Fine dining platform",
+    "category": "Restaurant",
+    "tech_stack": [
+      "Next.js",
+      "GSAP",
+      "Three.js"
+    ],
+    "github_url": "",
+    "live_url": "",
+    "image_url": "",
+    "featured": true,
+    "status": "active",
+    "display_order": 1
+  },
+  {
+    "id": 2,
+    "title": "Artisan Cafe",
+    "description": "Cozy boutique cafe website featuring live menu, online orders, and location finder.",
+    "short_desc": "Boutique cafe website",
+    "category": "Cafe",
+    "tech_stack": [
+      "React",
+      "Tailwind"
+    ],
+    "github_url": "",
+    "live_url": "",
+    "image_url": "",
+    "featured": true,
+    "status": "active",
+    "display_order": 2
+  },
+  {
+    "id": 3,
+    "title": "Azure Hotel and Resort",
+    "description": "Luxury hotel booking platform with interactive room tours and amenity showcases.",
+    "short_desc": "Hotel booking platform",
+    "category": "Hotel",
+    "tech_stack": [
+      "Next.js",
+      "Stripe"
+    ],
+    "github_url": "",
+    "live_url": "",
+    "image_url": "",
+    "featured": true,
+    "status": "active",
+    "display_order": 3
+  },
+  {
+    "id": 4,
+    "title": "Iron Fitness Gym",
+    "description": "High-energy fitness community platform with automated class schedules and membership signups.",
+    "short_desc": "Gym management platform",
+    "category": "Fitness",
+    "tech_stack": [
+      "React",
+      "Framer Motion"
+    ],
+    "github_url": "",
+    "live_url": "",
+    "image_url": "",
+    "featured": false,
+    "status": "active",
+    "display_order": 4
+  },
+  {
+    "id": 5,
+    "title": "Bella Beauty Salon",
+    "description": "Elegant salon appointment system with dynamic stylist schedules and treatment menus.",
+    "short_desc": "Salon booking system",
+    "category": "Salon",
+    "tech_stack": [
+      "Next.js",
+      "Calendar API"
+    ],
+    "github_url": "",
+    "live_url": "",
+    "image_url": "",
+    "featured": false,
+    "status": "active",
+    "display_order": 5
+  },
+  {
+    "id": 6,
+    "title": "Prime Estates",
+    "description": "Luxury real estate showcase with 3D property tours, interactive maps, and agent consultation.",
+    "short_desc": "Real estate platform",
+    "category": "Real Estate",
+    "tech_stack": [
+      "React",
+      "Google Maps"
+    ],
+    "github_url": "",
+    "live_url": "",
+    "image_url": "",
+    "featured": false,
+    "status": "active",
+    "display_order": 6
+  }
+]

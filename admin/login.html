@@ -1,81 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Login — UB Portfolio CMS</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login | Portfolio CMS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root{--bg:#050508;--card:rgba(15,15,22,.6);--border:rgba(255,59,48,.12);--text:#f3f4f6;--muted:#9ca3af;--acc:#ff3b30;--acc2:#ff8f00;--glow:rgba(255,59,48,.25);--grad:linear-gradient(135deg,#ff3b30,#ff8f00);--ff:'Outfit',sans-serif;--fb:'Plus Jakarta Sans',sans-serif;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --bg:#050508;--neon-blue:#00D4FF;--neon-purple:#A855F7;
-      --surface:rgba(12,12,22,.9);--border:rgba(0,212,255,.15);
-      --text:#f3f4f6;--muted:rgba(255,255,255,.55);--danger:#ff2a5f;
-    }
-    body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);
-      min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
-    body::before{content:'';position:absolute;inset:0;
-      background-image:linear-gradient(rgba(0,212,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.03) 1px,transparent 1px);
-      background-size:50px 50px;}
-    .glow{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none}
-    .g1{width:500px;height:500px;background:rgba(0,212,255,.1);top:-15%;left:-15%}
-    .g2{width:400px;height:400px;background:rgba(168,85,247,.1);bottom:-10%;right:-10%}
-    .card{background:var(--surface);border:1px solid var(--border);border-radius:24px;
-      padding:48px 40px;width:100%;max-width:420px;position:relative;z-index:10;
-      backdrop-filter:blur(20px);box-shadow:0 0 80px rgba(0,212,255,.06)}
+    body{font-family:var(--fb);background:var(--bg);color:var(--text);height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+    .glow{position:absolute;border-radius:50%;filter:blur(100px);opacity:.15;pointer-events:none;z-index:1}
+    .g1{width:50vw;height:50vw;background:var(--acc);top:-10%;left:-10%}
+    .g2{width:50vw;height:50vw;background:var(--acc2);bottom:-10%;right:-10%}
+    .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:2}
+    .box{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:48px 40px;width:100%;max-width:420px;position:relative;z-index:10;backdrop-filter:blur(20px);box-shadow:0 0 60px var(--glow)}
     .logo{text-align:center;margin-bottom:36px}
-    .logo-text{font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:900;
-      background:linear-gradient(135deg,var(--neon-blue),var(--neon-purple));
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-1px}
+    .logo-mark{font-family:var(--ff);font-size:2.5rem;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
     .logo-sub{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--muted);margin-top:6px}
     .field{margin-bottom:20px}
-    .field label{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;
-      color:var(--muted);margin-bottom:8px;font-weight:600}
-    .field input{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
-      border-radius:12px;padding:14px 16px;color:var(--text);font-family:'Space Grotesk',sans-serif;
-      font-size:.9rem;outline:none;transition:border-color .2s}
-    .field input:focus{border-color:var(--neon-blue);box-shadow:0 0 0 3px rgba(0,212,255,.1)}
-    .btn{width:100%;padding:14px;border:none;border-radius:50px;
-      background:linear-gradient(135deg,var(--neon-blue),var(--neon-purple));
-      color:#050508;font-family:'Space Grotesk',sans-serif;font-size:.9rem;font-weight:700;
-      cursor:pointer;letter-spacing:1px;margin-top:8px;transition:opacity .2s,transform .2s}
+    .field label{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:600}
+    .field input{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 16px;color:var(--text);font-family:var(--fb);font-size:.9rem;outline:none;transition:border-color .2s}
+    .field input:focus{border-color:var(--acc);box-shadow:0 0 0 3px var(--glow)}
+    .btn{width:100%;padding:14px;border:none;border-radius:50px;background:var(--grad);color:var(--bg);font-family:var(--fb);font-size:.9rem;font-weight:700;cursor:pointer;letter-spacing:1px;margin-top:8px;transition:opacity .2s,transform .2s}
     .btn:hover{opacity:.88;transform:translateY(-1px)}
-    .err{color:var(--danger);font-size:.8rem;margin-top:14px;text-align:center;display:none}
+    .btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+    .err{color:var(--acc);font-size:.8rem;margin-top:12px;text-align:center;display:none}
+    .hint{color:var(--muted);font-size:.75rem;text-align:center;margin-top:16px}
+    .hint span{color:var(--acc2)}
   </style>
 </head>
 <body>
-  <div class="glow g1"></div>
-  <div class="glow g2"></div>
-  <div class="card">
+  <div class="glow g1"></div><div class="glow g2"></div><div class="grid"></div>
+  <div class="box">
     <div class="logo">
-      <div class="logo-text">UB.</div>
-      <div class="logo-sub">CMS Admin Portal</div>
+      <div class="logo-mark">UB.</div>
+      <div class="logo-sub">Portfolio CMS Admin</div>
     </div>
-    <form id="loginForm">
-      <div class="field">
-        <label>Username</label>
-        <input type="text" id="uname" placeholder="admin" autocomplete="username" required>
-      </div>
-      <div class="field">
-        <label>Password / Token</label>
-        <input type="password" id="pwd" placeholder="Enter admin token" autocomplete="current-password" required>
-      </div>
-      <button type="submit" class="btn">Access Dashboard →</button>
-      <div class="err" id="err">❌ Invalid credentials. Please try again.</div>
+    <form id="form">
+      <div class="field"><label>Email Address</label><input type="email" id="email" placeholder="admin@portfolio.com" autocomplete="email" required></div>
+      <div class="field"><label>Password</label><input type="password" id="pwd" placeholder="Enter password" autocomplete="current-password" required></div>
+      <button type="submit" class="btn" id="btn"><i class="fas fa-sign-in-alt"></i>&nbsp; Access Dashboard</button>
+      <div class="err" id="err"></div>
     </form>
+    <div class="hint">Default: <span>admin@portfolio.com</span> / <span>portfolio_admin_2026</span></div>
   </div>
+  <script src="../js/config.js"></script>
+  <script src="../js/portfolio.js"></script>
   <script>
-    if (localStorage.getItem('adminToken')) location.href = 'dashboard.html';
-    document.getElementById('loginForm').addEventListener('submit', e => {
+    (async()=>{
+      try{const s=await window.portfolioAPI.checkSession();if(s&&s.authenticated)location.href='dashboard.html';}catch{}
+    })();
+    document.getElementById('form').addEventListener('submit',async e=>{
       e.preventDefault();
-      const u = document.getElementById('uname').value.trim();
-      const p = document.getElementById('pwd').value.trim();
-      if (u === 'admin' && p === 'portfolio_admin_2026') {
-        localStorage.setItem('adminToken', 'portfolio_admin_2026');
-        location.href = 'dashboard.html';
-      } else {
-        document.getElementById('err').style.display = 'block';
+      const btn=document.getElementById('btn');
+      const err=document.getElementById('err');
+      btn.disabled=true;btn.innerHTML='<i class="fas fa-circle-notch fa-spin"></i>&nbsp; Signing in...';
+      err.style.display='none';
+      try{
+        await window.portfolioAPI.loginAdmin(document.getElementById('email').value.trim(),document.getElementById('pwd').value.trim());
+        location.href='dashboard.html';
+      }catch(ex){
+        err.textContent=ex.message||'Login failed. Check your credentials.';
+        err.style.display='block';
+        btn.disabled=false;btn.innerHTML='<i class="fas fa-sign-in-alt"></i>&nbsp; Access Dashboard';
       }
     });
   </script>
